@@ -4,8 +4,17 @@
     <meta charset="UTF-8">
     <title>Il tuo posto</title>
 </head>
+
 <body>
     <h1>Il tuo posto</h1>
-    <img src="1.png" style="max-width:100%;">
+
+    <img id="sala" style="max-width:100%;">
+
+    <script>
+        const parametri = new URLSearchParams(window.location.search);
+        const posto = parametri.get("posto") || "1";
+
+        document.getElementById("sala").src = posto + ".png";
+    </script>
 </body>
 </html>
