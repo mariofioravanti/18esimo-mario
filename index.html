@@ -2,15 +2,49 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Il tuo posto</title>
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        #contenitore {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        #sala {
+            width: 118.96%;
+            max-width: none;
+            height: auto;
+            display: block;
+            margin-left: -7.50%;
+        }
+
+        /* Su PC l'immagine viene adattata allo schermo */
+        @media (min-width: 768px) {
+            #sala {
+                width: 100%;
+                max-width: 100%;
+                margin-left: 0;
+            }
+        }
+    </style>
 </head>
 
-<body style="background-color: black; color: white; text-align: center; margin: 0; padding: 0; overflow-x: hidden;">
+<body>
 
     <h1>Il tuo posto</h1>
 
-    <div style="width: 100%; overflow: hidden;">
-        <img id="sala" style="width: 118.96%; max-width: none; height: auto; display: block; margin-left: -7.50%;">
+    <div id="contenitore">
+        <img id="sala">
     </div>
 
     <script>
